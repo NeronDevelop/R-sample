@@ -2,8 +2,7 @@
 # TODO: 入れ子に対応したい。
 # 任意のディレクトリを作らいたい.
 #
-MakeFolder <- function(folder_name="") {
-
+MakeFolder <- function(folder_name = "") {
   # エラー出力定義
   ARG_ERR <- "\nArgments is Invalid!\n"
 
@@ -14,7 +13,7 @@ MakeFolder <- function(folder_name="") {
   # 引数のチェック
   #
   if (class(folder_name) != "character" || length(folder_name) != 1) {
-    stop(message=ARG_ERR)
+    stop(message = ARG_ERR)
   }
 
   if (folder_name == "") {
