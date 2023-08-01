@@ -3,7 +3,7 @@
 # TODO: 考えること
 # ファイルを引数にとれないからとれるようにしたほうがいいかも...
 #
-df2yaml <- function(df, output_path="output.yaml", id=TRUE) {
+TransDfToYaml <- function(df, output_path="output.yaml", id=TRUE) {
   # サブ関数
   output_element <- function(df, row_num, row_name) {
     return(paste0("    ", row_name, ": ", df[row_num, row_name], "\n"))
@@ -18,7 +18,7 @@ df2yaml <- function(df, output_path="output.yaml", id=TRUE) {
   row_names <- names(df)
   sink(output_path)
   cat("---\n")
-  for (row_num in 1:nrow(df)) {
+  for (row_num in seq_len(nrow(df))) {
     cat("-\n")
     if (id) {
       cat(paste0("    id: ", row_num, "\n"))
