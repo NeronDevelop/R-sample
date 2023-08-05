@@ -10,8 +10,8 @@ PlotHeat <- function(df, xlabel, ylabel, title_str=NULL, x_str=NULL, y_str=NULL)
   xlim(xlabel) +
   ylim(ylabel) +
   theme(text=element_text(size = 20), legend.title=element_text(size = 15)) +
-  theme(axis.text.x = element_text(angle = 90, size=10, vjust = 0.5, hjust = 1)) +
-  theme(axis.text.y = element_text(size=10)) +
+  theme(axis.text.x = element_text(angle = 90, size=15, vjust = 0.5, hjust = 1)) +
+  theme(axis.text.y = element_text(size=15)) +
   labs(title = title_str, x = x_str, y = y_str)
   return(g)
 }
